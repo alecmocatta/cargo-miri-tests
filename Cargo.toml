@@ -1,0 +1,25 @@
+[workspace]
+
+[package]
+name = "root"
+version = "0.1.0"
+authors = ["Alec Mocatta <alec@mocatta.net>"]
+edition = "2018"
+
+[features]
+disabled = []
+
+[dependencies]
+sub = { path = "sub" }
+
+[[test]]
+name = "harness_false"
+harness = false
+
+[[test]]
+name = "disabled"
+required-features = ["disabled"]
+
+[[test]]
+name = "test_false"
+test = false
